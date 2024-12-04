@@ -1,3 +1,7 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+
+task_create:
+    path: /task/create
+    controller: App\Controller\TaskCreateController::create

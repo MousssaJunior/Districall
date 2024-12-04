@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create Task{% endblock %}
+
+{% block body %}
+    <h1>Create Task</h1>
+
+    {% for label, message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    {{ form_start(form) }}
+        <div>
+            {{ form_row(form.title) }}
+        </div>
+
+        <div>
+            {{ form_row(form.description) }}
+        </div>
+
+        <div>
+            {{ form_row(form.status) }}
+        </div>
+
+        <div>
+            <button type="submit">Create Task</button>
+        </div>
+    {{ form_end(form) }}
+{% endblock %}
